@@ -26,21 +26,21 @@ variable "token" {
 
 # Service account
 
-variable "existing_sa_id" {
+variable "service_account_id" {
   type        = string
   description = "ID of already existing account"
 }
 
-variable "existing_account_name" {
+variable "service_account_name" {
   type        = string
-  default     = "terraform"
-  description = "Service account name"
+  default = "terraform"
+  description = "Name for the service account"
 }
 
-variable "existing_account_description" {
+variable "service_account_description" {
   type        = string
-  default     = "Main account for all Terraform actions"
-  description = "Description of the account name"
+  default     = "Service account created by Terraform"
+  description = "Description for the service account"
 }
 
 # Roles
@@ -56,3 +56,4 @@ variable "storage_admin" {
   default     = "storage.admin"
   description = "Storage admin"
 }
+
